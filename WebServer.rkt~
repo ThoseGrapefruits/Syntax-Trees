@@ -1,0 +1,11 @@
+(require web-server/servlet
+	 web-server/servlet-env)
+ 
+(define (start req)
+  (no-web-browser)
+  (response/xexpr
+   `(html (head (title "Syntax Tree Generator"))
+          (body (p "Hey out there!"))
+	  (body (p req)))))
+
+(serve/servlet start)
