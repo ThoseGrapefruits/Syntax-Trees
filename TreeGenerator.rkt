@@ -2,7 +2,8 @@
 
 (require 2htdp/image)
 
-;; generate-tree : String -> Image
+;; generate-tree : String String Boolean Boolean Boolean -> Image
+;; (generate-tree input font color? subscript? triangles?)
 ;; Generates a syntax tree based on the given string
 ;; String Format:
 ;;    [S [NP phpSyntaxTree][VP [V creates][NP nice syntax trees]]]
@@ -16,5 +17,4 @@
 ;;   Whistles:
 ;;     - Automatic numbering of repeated entries (toggleable)
 ;;     - Coloring (toggleable)
-(define (generate-tree s)
-  )
+(define (generate-tree input font color? subscript? triangles? ))
