@@ -1,7 +1,14 @@
 #lang racket
 (require web-server/servlet
-	 web-server/servlet-env)
+         web-server/servlet-env)
 ;(require (file "TreeGenerator.rkt"))
+#|
+Features:
+  Primary:
+  Bells:
+  Whistles
+|#
+(define GET-ID 'phrase)
 
 (define (start req)
   (response/xexpr
