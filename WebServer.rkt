@@ -5,8 +5,15 @@
 #|
 Features:
   Primary:
+    - Text input to build syntax tree
+    - Output resulting syntax tree image
+
   Bells:
-  Whistles
+    - Nice style sheet
+
+  Whistles:
+    - Some alternative visual way to build syntax trees
+
 |#
 (define GET-ID 'phrase)
 

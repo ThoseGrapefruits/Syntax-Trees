@@ -11,12 +11,10 @@ Compact String Format:
    [S [NP racketSyntaxTree][VP [V creates][NP lovely, multi-line\nsyntax trees]]]
 
 Expanded String Format:
-   [S
-     [NP racketSyntaxTree]
-     [VP
-       [V creates]
-       [NP lovely, multi-line
-           syntax trees]]]
+   [S [NP racketSyntaxTree]
+      [VP [V creates]
+          [NP lovely, multi-line
+              syntax trees]]]
 
 Features:
   Primary:
