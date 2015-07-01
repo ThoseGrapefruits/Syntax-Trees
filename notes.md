@@ -17,3 +17,11 @@ Internal Project Notes
     + Display output image
 - __String parsing (could go to either one)__
 - Adding specific features described in `WebServer.rkt`
+
+##Other Ideas
+- Output Formats
+    + `jpg` (standard)
+    + `png` (with transparency)
+    + Long-Term
+        * `svg`
+        * `pdf`
