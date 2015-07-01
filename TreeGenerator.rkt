@@ -29,10 +29,9 @@ Features:
     - Multi-sentence side-by-side generation
 
 Considerations & Decisions
-- Should the parsing be done by the tree generator, or should the web server parse it and
-  then pass it off to the generate-tree function as a new easier to work with data type?
-    L: I think this should be done in the WebServer, assuming that the task of generating
-       the trees is going to be the most difficult part, which it looks like it is to me.
+- Should the parsing be done by the tree generator, or should the web server
+  parse it and then pass it off to the generate-tree function as a new easier
+  to work with data type?
 |#
 
 (define (generate-tree input font color? subscript? triangles? ))

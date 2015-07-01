@@ -18,10 +18,13 @@ Features:
 (define GET-ID 'phrase)
 
 (define (start req)
-  (response/xexpr
-   `(html (head (title "Better Syntax Tree Generator"))
-          (body (h1 "Better Syntax Tree Generator"))
-          (footer (p "Written by Shaughnessy Jones and Logan Moore")))))
+  (start
+   (send/suspend
+    (lambda (k-url)
+      (response/xexpr
+       `(html (head (title "Better Syntax Tree Generator"))
+              (body (h1 "Better Syntax Tree Generator"))
+              (footer (p "Written by Shaughnessy Jones and Logan Moore"))))))))
 
 (serve/servlet start
                #:command-line? #t)

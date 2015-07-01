@@ -1,11 +1,27 @@
+#lang racket
 (require web-server/servlet
-	 web-server/servlet-env)
- 
-(define (start req)
-  (no-web-browser)
-  (response/xexpr
-   `(html (head (title "Syntax Tree Generator"))
-          (body (p "Hey out there!"))
-	  (body (p req)))))
+         web-server/servlet-env)
+;(require (file "TreeGenerator.rkt"))
+#|
+Features:
+  Primary:
+    - Text input to build syntax tree
+    - Output resulting syntax tree image
 
-(serve/servlet start)
+  Bells:
+    - Nice style sheet
+
+  Whistles:
+    - Some alternative visual way to build syntax trees
+
+|#
+(define GET-ID 'phrase)
+
+(define (start req)
+  (response/xexpr
+   `(html (head (title "Better Syntax Tree Generator"))
+          (body (h1 "Better Syntax Tree Generator"))
+          (footer (p "Written by Shaughnessy Jones and Logan Moore")))))
+
+(serve/servlet start
+               #:command-line? #t)
