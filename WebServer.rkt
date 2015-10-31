@@ -2,6 +2,7 @@
 (require web-server/servlet
          web-server/servlet-env)
 ;(require (file "TreeGenerator.rkt"))
+
 #|
 Features:
   Primary:
@@ -15,16 +16,22 @@ Features:
     - Some alternative visual way to build syntax trees
 
 |#
+
 (define GET-ID 'phrase)
 
+(define (generate req)
+  (response/xexpr
+    `(html (head (title "Better Syntax Tree Generator"))
+	   (body (h1 "Better Syntax Tree Generator")
+		 (img ((src "path_to_image") alt=))
+	   (footer (p "Written by Shaughnessy Jones and Logan Moore")))))
+
 (define (start req)
-  (start
-   (send/suspend
-    (lambda (k-url)
-      (response/xexpr
-       `(html (head (title "Better Syntax Tree Generator"))
-              (body (h1 "Better Syntax Tree Generator"))
-              (footer (p "Written by Shaughnessy Jones and Logan Moore"))))))))
+  (response/xexpr
+    `(html (head (title "Better Syntax Tree Generator"))
+	   (body (h1 "Better Syntax Tree Generator"))
+	   (footer (p "Written by Shaughnessy Jones and Logan Moore")))))
 
 (serve/servlet start
-               #:command-line? #t)
+	       #:servlet-regexp #rx""
+	       #:command-line? #t)
